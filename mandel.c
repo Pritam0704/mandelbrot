@@ -66,36 +66,37 @@ int main(int argc, char *argv[])
 
     while ((c = getopt(argc, argv, "x:y:s:W:H:m:o:n:h")) != -1)// we added n as the no of the thread
 	 {
-        switch (c) {
-			switch(c) {
-				case 'x':
-					xcenter = atof(optarg);
-					break;
-				case 'y':
-					ycenter = atof(optarg);
-					break;
-				case 's':
-					scale = atof(optarg);
-					break;
-				case 'W':
-					image_width = atoi(optarg);
-					break;
-				case 'H':
-					image_height = atoi(optarg);
-					break;
-				case 'm':
-					max = atoi(optarg);
-					break;
-				case 'o':
-					outfile = optarg;
-					break;
-				case 'n': // This will assign the value to num_thread as a integer
-					num_threads = atoi(optarg);
-					break;
-				case 'h':
-					show_help();
-					exit(1);
-					break;
+     	 	switch(c) {
+			case 'x':
+				xcenter = atof(optarg);
+				break;
+			case 'y':
+				ycenter = atof(optarg);
+				break;
+			case 's':
+				scale = atof(optarg);
+				break;
+			case 'W':
+				image_width = atoi(optarg);
+				break;
+			case 'H':
+				image_height = atoi(optarg);
+				break;
+			case 'm':
+				max = atoi(optarg);
+				break;
+			case 'o':
+				outfile = optarg;
+				break;
+			case 'n': // This will assign the value to num_thread as a integer
+				num_threads = atoi(optarg);
+				break;
+			case 'h':
+				show_help();
+				exit(1);
+				break;
+		
+			
         }
     }
 	// Display the configuration of the image.
